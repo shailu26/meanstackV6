@@ -16,7 +16,7 @@
       
 # Test - 
       To test the application install Postman Extension of Chrome
-      call this
+       Provide these Details
       
       Url - localhost:3000/api/user/newUser 
       Method - Post

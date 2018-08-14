@@ -1,10 +1,10 @@
 <div class="signup-pg">
 
   <h2 class="signup-pg__signup-title">signup</h2>
-    <form class="signup-pg__signup-form">
+    <form class="signup-pg__signup-form" #signUpForm="ngForm" [formGroup]="signUpData" (ngSubmit)="createUser(signUpForm)">
        <div class="signup-pg__signup-form--name-row">
         <mat-form-field class="signup-pg__signup-form--mat-form-field">
-          <input matInput placeholder="Name" name="name" value="" type="text" required>
+          <input matInput placeholder="Name" name="name" formControlName="name" value="" type="text" required>
           <!-- <mat-error *ngIf="loginForm.invalid">
             email is
             <strong>required</strong>
@@ -13,7 +13,7 @@
       </div>
        <div class="signup-pg__signup-form--username-row">
         <mat-form-field class="signup-pg__signup-form--mat-form-field">
-          <input matInput placeholder="Username" name="username" value="" type="text" required>
+          <input matInput placeholder="Username" name="username" formControlName="username" value="" type="text" required>
           <!-- <mat-error *ngIf="loginForm.invalid">
             email is
             <strong>required</strong>
@@ -22,7 +22,7 @@
       </div>
       <div class="signup-pg__signup-form--email-row">
         <mat-form-field class="signup-pg__signup-form--mat-form-field">
-          <input matInput placeholder="Email" name="email" value="" type="email" required>
+          <input matInput placeholder="Email" name="email" formControlName="email" value="" type="email" required>
           <!-- <mat-error *ngIf="loginForm.invalid">
             email is
             <strong>required</strong>
@@ -31,7 +31,7 @@
       </div>
       <div class="signup-pg__signup-form--password-row">
         <mat-form-field class="signup-pg__signup-form--mat-form-field">
-          <input matInput placeholder="Password" name="password" value="" type="password" required>
+          <input matInput placeholder="Password" name="password" formControlName="password" value="" type="password" required>
           <!-- <mat-error *ngIf="loginForm.invalid">
             password is
             <strong>required</strong>

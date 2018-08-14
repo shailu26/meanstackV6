@@ -1,7 +1,7 @@
-.login-pg {
+.signup-pg {
   text-align: center;
   width: 50%;
-  height: 50%;
+  height: 80%;
   min-width: 200px;
   max-width: 278px;
   padding: 40px;
@@ -12,6 +12,6 @@
   bottom: 0;
   right: 0;
 }
-.login-pg__login-form--mat-form-field {
+.signup-pg__signup-form--mat-form-field {
   width: 100%;
 }

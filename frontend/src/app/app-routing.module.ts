@@ -17,6 +17,10 @@ import {
   LoginComponent
 } from './components/login/login.component';
 
+import {
+  SignupComponent
+} from './components/signup/signup.component';
+
 const routes: Route[] = [
   {
     path: '',
@@ -30,7 +34,11 @@ const routes: Route[] = [
     component: LoginComponent,
 
   },
+  {
+    path: 'signup',
+    component: SignupComponent,
 
+  },
   {
     path: '**',
     redirectTo: 'Error',

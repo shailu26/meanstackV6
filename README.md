@@ -30,3 +30,6 @@
      Hit Send and Done!!! :)
      
      Enjoy!
+     
+     # Frontend Folder - 
+     Frontend folder has angular6 app running. right now i have only static login page. soon going to use Backend Api

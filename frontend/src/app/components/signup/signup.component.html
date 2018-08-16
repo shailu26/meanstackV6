@@ -1,10 +1,10 @@
 <div class="signup-pg">
 
   <h2 class="signup-pg__signup-title">signup</h2>
-    <form class="signup-pg__signup-form" #signUpForm="ngForm" [formGroup]="signUpData" (ngSubmit)="createUser(signUpForm)">
+    <form class="signup-pg__signup-form" #signUpForm="ngForm" [formGroup]="signUpValidation" (ngSubmit)="createUser(signUpForm)">
        <div class="signup-pg__signup-form--name-row">
         <mat-form-field class="signup-pg__signup-form--mat-form-field">
-          <input matInput placeholder="Name" name="name" formControlName="name" value="" type="text" required>
+          <input matInput placeholder="Name" name="name" formControlName="name" value="" type="text" (change)="isSignUpFormValid()" required>
           <!-- <mat-error *ngIf="loginForm.invalid">
             email is
             <strong>required</strong>
@@ -40,7 +40,7 @@
       </div>
 
       <div>
-        <button mat-raised-button color="primary">Signup</button>
+        <button mat-raised-button color="primary" ng-disabled="isValidForm">Signup</button>
       </div>
     </form>
 </div>

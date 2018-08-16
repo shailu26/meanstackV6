@@ -10,7 +10,6 @@ import { UserDetailService } from '../../services/userDetail/user-detail.service
 
 export class SignupComponent implements OnInit {
   signUpValidation: FormGroup;
-  isValidForm = false;
   constructor(
     private userApi: UserDetailService,
     private formBuilder: FormBuilder
@@ -25,9 +24,6 @@ export class SignupComponent implements OnInit {
     });
   }
 
-  isSignUpFormValid() {
-    console.log('.////.');
-  }
   createUser(userDetails) {
     console.log('userdetail', userDetails.value);
     this.userApi.createNewUser(userDetails.value).subscribe(res => {

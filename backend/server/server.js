@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 init(app);
 
 // Mongo Connection
-const uri = "mongodb://shail:shail123@ds219432.mlab.com:19432/meanstack" || config.all.mongo.uri;
+const uri = config.all.mongo.uri;
 mongoose.connect(uri);
 const connection = mongoose.connection;
 
